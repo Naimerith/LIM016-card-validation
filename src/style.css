@@ -1,0 +1,221 @@
+* { 
+    margin: 0;
+    padding:10;
+    box-sizing: border-box;
+    background: #EEDCE4}
+
+header{
+position: static;
+width: 100%;
+height: 100px;
+background: #FFFFFF;} 
+
+.logo{
+position: absolute;
+width: 150px;
+height: 150px;
+left: 10px;
+top: -15px;
+}
+
+h1{
+font-family: 'Shadows Into Light', cursive;
+margin: auto;
+width: 845px;
+font-family: Shadows Into Light;
+font-weight: normal;
+font-size: 72px;
+color: #000000;
+background-color: white;}
+ 
+/*Barra de navegación Horizontal 
+nav{
+position: absolute;
+width: 100%;
+height: 51px;
+top: 123px;
+text-align: center;
+background: #70495B;
+border: 1px solid #000000;}
+
+nav ul{
+    list-style: none;
+    display: inline-block;
+    padding:0px;
+    //list-style-type: none; Quita las viñetas de mi lista de navegacion
+    margin: 0px;
+    padding: 0px;}
+
+
+nav ul li {
+    display: inline-block;
+    //float: left; coloca un elemento al lado del otro
+    padding: 10px 10px;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-size: 22px;
+    color: #FFFFFF;
+    border-right: 1px solid #000000;}*/
+
+main section h2{
+position: absolute;
+height: 135px;
+top: 225px;
+font-family: Source Sans Pro;
+font-style: italic;
+font-weight: 300;
+font-size: 26px;
+line-height: 30px; /*Interlineado*/
+display: flex; 
+text-align: justify;
+margin-left: 90px;
+margin-right: 90px;
+color: #000000;}
+
+article h3{
+position: absolute;
+width: 470px;
+height: 40px;
+left: 81px;
+top: 370px;
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 31px;
+color: #000000;}
+
+form{
+position: absolute;
+padding: 65px;
+width: 600px;
+height: 366px;
+left: 49px;
+top: 403px;
+background: #EEE6E6;}
+
+label{
+position: relative;
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: 900;
+font-size: 15px;}
+
+input{
+height: 40px; 
+margin-bottom: 8px;
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+align-content: center;}
+
+.campo{
+border: solid 1px #999;
+width: 300px;
+}
+
+
+#expiration{
+float:left;
+width: 100px;
+margin-right: 20px;
+border: solid 1px #999;}
+
+#cvc{
+margin-right: 20px;
+width: 80px;
+float: left;}
+
+.tarjeta{
+position: absolute;
+width: 528px;
+height: 300px;
+left: 700px;
+top: 435px;
+float: right;
+background-image: url(./img/tarjeta.png);
+background-size: 100% 100%;}
+
+/*ESTILOS AL FORMULARIO DE LA IMAGEN (TARJETA)*/ 
+.tarj-num{
+position: absolute;
+width: 450px;
+height: 40px;
+left: 50px;
+top: 175px;
+background: #FFFBFB;
+border: solid 1px #999;
+}
+
+.tarj-nam{
+position: absolute;
+width: 300px;
+height: 40px;
+left: 50px;
+top: 240px;
+background: #FFFBFB;
+border: solid 1px #999;
+}
+.tarj-dat{
+position: absolute;
+width: 100px;
+height: 40px;
+left: 400px;
+top: 240px;
+background: #FFFBFB;
+border: solid 1px #999;
+}
+
+/*ESTILOS DEL BOTON*/
+#btnClick{
+position: absolute;
+width: 300px;
+height: 50px;
+left: 496px;
+top: 799px;
+background: #70495B;
+border-radius: 30px;
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 35px;
+line-height: 40px;
+color: #FFFDFD;}
+
+
+.seguridad p{
+position: absolute;
+width: 1000px;
+height: 53px;
+top: 897px;
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+text-align: center;
+margin-left: 120px;
+color: rgba(17, 16, 16, 0.5);}
+
+.contacto{
+position: absolute;
+height: 20px;
+top: 955px;
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+color: #000000;}
+
+.footer{
+position: absolute;
+width: 693px;
+height: 20px;
+left: 373px;
+top: 993px;
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 30px;
+color: #777070;}
