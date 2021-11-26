@@ -1,30 +1,45 @@
 
 import validator from './validator.js';
 
-console.log(validator);
-
-let tarjeta = document.getElementById('tarjeta'); 
 const btnClick = document.getElementById('btnClick');
+const duplicate = document.getElementById("tarjeta-numero");
+const duplicateName = document.getElementById("tarjeta-name");
+const duplicateCvv = document.getElementById("date");
 
 
 //Esta funcion va a llamar a al metodo isValid cuando se de click en el boton 
 function validarTarjeta (){
-//declaro una variable que va a traer el valor de mi input (en este caso el numero de tarjeta)    
-    let digitos= tarjeta.value; 
-//declaro una variable resultado que va a llamar a mi funcion validator y va a recorrer el metodo isValid y le paso la variable digitos (en donde se encuentra el valor de mi tarjeta)
-    let resultado = validator.isValid(digitos); 
 
-//Hago la condicion de si mi resultado es igual a verdadero muestre un alert con tarjeta valida 
+    let tarjeta = document.getElementById('tarjeta'); //obtengo el elemento id que esta en el documento 
+    let numberPosition= tarjeta.value; //Guardo en una variable que va a traer el valor de mi input ( var = tarjeta)    
+    let name = document.getElementById("name");
+    let titular = name.value; 
+    let cvv = document.getElementById("expiration");
+    let F_expiration = cvv.value;
+
+    //Para duplicar los datos del formulario en el simulador (tarjeta)
+    duplicate.innerHTML = numberPosition; 
+    duplicateName.innerHTML = titular;  
+    duplicateCvv.innerHTML = F_expiration;
+
+    let resultado = validator.isValid(numberPosition); //declaro una variable resultado que va a llamar a mi funcion validator y va a recorrer el metodo isValid
+    let enmascarar = validator.maskify(numberPosition); //declaro una variable resultado que va a llamar a mi funcion validator y va a recorrer el metodo isValid
+
+    
+//Hago la condicion de si mi resultado es igual a verdadero muestre un alert con tarjeta valida, sino la tarjeta es invalida - se enmascan los ultimos 4 digitos
     if (resultado == true){
         alert("La tarjeta es valida");
-    }// sino muestra un alert con tarjeta no valida. 
+        tarjeta.value = enmascarar; 
+    }
     else{
-        alert("La tarjeta no es valida");
+        alert("La tarjeta es Invalida");
+        tarjeta.value = enmascarar; 
     }
 }
 
-//Es un evento que se debe ejecutar despues de la funcion validarTarjeta, el cual escucha al boton al dar click 
-btnClick.addEventListener ("click", validarTarjeta)
+btnClick.addEventListener ("click", validarTarjeta); //Es un evento que se debe ejecutar despues de la funcion validarTarjeta, el cual escucha al boton al dar click 
+
+
 
     
 
