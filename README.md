@@ -76,35 +76,49 @@ Su uso esta orientado a toda persona de cualquier sexo, mayor de edad que posea 
 
 ## 4. Investigación UX
 
-Requerimiento: 
+Requerimiento:
+
 *Crear una aplicación que contenga un formulario con la información básica de los portadores de tarjetas de créditos (Nombre o titular, Número de tarjeta de crédito, fecha de expiración, código de seguridad). 
+
 *Proveer un botón que permita eliminar los campos del formulario y rehacer el procedimiento.
+
 *Enmascarar el número de tarjeta de crédito que ingrese el usuario, una vez validada; para su seguridad y confianza.  
+
 *Mostrar un simulador de tarjeta en donde el usuario pueda corroborar que los datos suministrados en el formulario coinciden con los de su tarjeta de crédito. 
+
 *Insertar un botón de "Validar" que muestre si la el número de tarjeta de crédito suinistrado es valido o invalido. 
+
 
 Se realizó una interfaz amigable, sencilla y fácil de manipular para una mejor experiencia con el usuario. 
 
-****** Quiénes son los principales usuarios de producto.*******
+****** Quiénes son los principales usuarios de producto.******
+
 Cualquier persona mayor de edad, independientemente de sexo; que posea tarjeta de credito de cualquier entidad bancaria, sin distinción de país. 
 
 ****** Cuáles son los objetivos de estos usuarios en relación con tu producto.******
+
 Validar los datos de su tarjeta de crédito. 
 
 ****** Cómo crees que el producto que estás creando está resolviendo sus problemas.******
+
 Permite que el usuario pueda validar su tarjeta de crédito de una forma rápida, sencilla y de manera gratuita. 
 
+
 ## 5. Prototipo de Baja Fidelidad 
+
 
 ![WhatsApp Image 2021-10-06 at 9 03 28 AM](https://user-images.githubusercontent.com/89501132/143522361-7c96c3ef-78cd-4733-93cc-14c9cc075ea4.jpeg)
 
 
 ## 6. Interfaz de Usuario
 
+
 ![PROTOTIPO DE ALTA FIDELIDAD](https://user-images.githubusercontent.com/89501132/143523888-8a0fecd0-de6c-4dbf-9744-d5c0f8435288.png)
 
 
+
 ### Recursos y temas relacionados
+
 
 A continuación un video de Michelle que te lleva a través del algoritmo de Luhn
 y un par de cosas más que debes saber para resolver este proyecto. ¡Escúchala
