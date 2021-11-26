@@ -27,43 +27,63 @@
 
         <h3>Verifica el Número de tu tarjeta de Crédito:</h3>
 
-        <div class="form-container">
-
-          <form id="user-form" name="formulario" method="get">
+          <form class="form-container" id="formulario" name="formulario" method="get">
             
               <label for="name">Titular</label><br>
               <input class="campo" type="text" id="name" placeholder="Ejm: Daniela Magdaleno" required="" pattern="[a-zA-Z]+"><br>
+              
                        
               <label for="cardNumber">Número de Tarjeta</label><br>
-              <input class="campo" type="text" id="tarjeta" placeholder="**** **** **** ****" minlength="8" maxlength="20" pattern="[0-9]+"><br>
+              <input class="campo" type="text" id="tarjeta" placeholder="**** **** **** ****" minlength="8" maxlength="20" pattern="[0-9]+">
 
-              <label for="expiration">Fecha de vencimiento</label><br>
-              <input type="month" id="expiration" placeholder="09/22"><br>
-            
-              <label for="cvv">cvv</label><br>
-              <input class="campo" type="text" id="cvv" placeholder="Ejm: 445" maxlength=" 3 ">
-            
-              <button type="reset"> Limpiar Datos </button>
+              <div class="flexbox"> 
+                <div class="select"> Fecha de Expiración
+                  <select class="expiration" name="mes" id="selectMes">
+                    <option>Mes</option>
+                  </select>
+                  <select class="expiration" name="year" id="selectYear">
+                    <option disabled selected>Año</option>
+                  </select>
+                </div>
 
+                <div class="select">
+                  <label for="cvv">cvv</label><br>
+                  <input class="campo" type="text" id="cvv" placeholder="Ejm: 445" maxlength=" 3 ">
+                </div>
+
+                  <div class="select">
+                    <button type="reset"> Limpiar Datos </button>
+                  </div>
+
+              </div>
+            
+             
           </form>
+
           <input type="submit" value ="Validar" id="btnClick">
-        </div>
+          
       </article>
 
       <article>
         <div class="tarjeta">
+          <p class="resultado" id="valida"></p>
+          <p class="resultado" id="invalida"></p>
           <p class="tarj-num" id="tarjeta-numero"></p><br>
-          <p class="tarj-nam" id="tarjeta-name"></p><br>
-          <p class="date" id="date" ></p>
+          <p class="tarj-nam" id="tarjeta-name" ></p><br>
+          <p class="tarj-date">
+            <span class="mes" id="tarj-mes">MM</span> / <span class="years" id="tarj-year">AA</span>
+          </p>
         </div>
 
       </article>
+      
     </main>
 
     <footer>
 
       <div class="seguridad">
-        <p> No podemos acceder a la información que inserte en el sitio web. Todos los cálculos se realizan en su navegador para que su número de tarjeta de crédito permanezca seguro con usted.</p><hr>
+        
+        <p><i class="fas fa-shield-alt"></i> No podemos acceder a la información que inserte en el sitio web. Todos los cálculos se realizan en su navegador para que su número de tarjeta de crédito permanezca seguro con usted.</p><hr>
       </div>
 
       <div class="footer">
@@ -72,5 +92,7 @@
     </footer>
 
     <script src="index.js" type="module"></script>
+
+    <script src="https://kit.fontawesome.com/9323b71566.js" crossorigin="anonymous"></script>
   </body>
 </html>
