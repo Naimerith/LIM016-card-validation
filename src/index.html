@@ -1,76 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Source+Sans+Pro:wght@200&display=swap"
+    rel="stylesheet">
+</head>
 
-    <header>
-      <div>
-        <img class="logo" src="./img/logo.png" alt="Credit Card Validator">
-      </div>
-      <h1>Credit Card Validator </h1>
-    </header>
+<body>
 
-    <main>
+  <header>
+    <div>
+      <img class="logo" src="./img/logo.png" alt="Credit Card Validator">
+    </div>
+    <h1>Credit Card Validator </h1>
+  </header>
 
-      <section>
-        <h2>"Credit Car Validator es una herramienta que te permite validar tus tarjetas de crédito, de una forma rápida, sencilla y totalmente gratis, mediante un sistema integrado por el algoritmo de Luhn". </h2>
-      </section>
+  <main>
 
-      <article>
+    <section>
+      <h2>"Credit Car Validator es una herramienta que te permite validar tus tarjetas de crédito, de una forma rápida,
+        sencilla y totalmente gratis, mediante un sistema integrado por el algoritmo de Luhn". </h2>
+    </section>
 
-        <h3>Verifica el Número de tu tarjeta de Crédito:</h3>
+    <article>
 
-        <div class="form-container">
+      <h3>Verifica el Número de tu tarjeta de Crédito:</h3>
 
-          <form id="user-form" name="formulario" method="get">
-            
-              <label for="name">Titular</label><br>
-              <input class="campo" type="text" id="name" placeholder="Ejm: Daniela Magdaleno" required="" pattern="[a-zA-Z]+"><br>
-                       
-              <label for="cardNumber">Número de Tarjeta</label><br>
-              <input class="campo" type="text" id="tarjeta" placeholder="**** **** **** ****" minlength="8" maxlength="20" pattern="[0-9]+"><br>
+      <form class="form-container" id="formulario" name="formulario" method="get">
 
-              <label for="expiration">Fecha de vencimiento</label><br>
-              <input type="month" id="expiration" placeholder="09/22"><br>
-            
-              <label for="cvv">cvv</label><br>
-              <input class="campo" type="text" id="cvv" placeholder="Ejm: 445" maxlength=" 3 ">
-            
-              <button type="reset"> Limpiar Datos </button>
+        <label for="name">Titular</label><br>
+        <input class="campo" type="text" id="name" placeholder="Ejm: Daniela Magdaleno" required=""
+          pattern="[a-zA-Z]+"><br>
 
-          </form>
-          <input type="submit" value ="Validar" id="btnClick">
+
+        <label for="cardNumber">Número de Tarjeta</label><br>
+        <input class="campo" type="text" id="tarjeta" placeholder="**** **** **** ****" minlength="8" maxlength="20"
+          pattern="[0-9]+">
+
+        <div class="flexbox">
+          <div class="select"> Fecha de Expiración
+            <select class="expiration" name="mes" id="selectMes">
+              <option>Mes</option>
+            </select>
+            <select class="expiration" name="year" id="selectYear">
+              <option disabled selected>Año</option>
+            </select>
+          </div>
+
+          <div class="select">
+            <label for="cvv">cvv</label><br>
+            <input class="campo" type="text" id="cvv" placeholder="Ejm: 445" maxlength=" 3 ">
+          </div>
+
+          <div class="select">
+            <button type="reset"> Limpiar Datos </button>
+          </div>
+
         </div>
-      </article>
 
-      <article>
-        <div class="tarjeta">
-          <p class="tarj-num" id="tarjeta-numero"></p><br>
-          <p class="tarj-nam" id="tarjeta-name"></p><br>
-          <p class="date" id="date" ></p>
-        </div>
 
-      </article>
-    </main>
+      </form>
 
-    <footer>
+      <input type="submit" value="Validar" id="btnClick">
 
-      <div class="seguridad">
-        <p> No podemos acceder a la información que inserte en el sitio web. Todos los cálculos se realizan en su navegador para que su número de tarjeta de crédito permanezca seguro con usted.</p><hr>
+    </article>
+
+    <article>
+      <div class="tarjeta">
+        <p class="resultado" id="valida"></p>
+        <p class="resultado" id="invalida"></p>
+        <p class="tarj-num" id="tarjeta-numero"></p><br>
+        <p class="tarj-nam" id="tarjeta-name"></p><br>
+        <p class="tarj-date">
+          <span class="mes" id="tarj-mes">MM</span> / <span class="years" id="tarj-year">AA</span>
+        </p>
       </div>
 
-      <div class="footer">
-        <h5>© 2021 Credit Card Validator | Todos los derechos reservados</h5>
-      </div>
-    </footer>
+    </article>
 
-    <script src="index.js" type="module"></script>
-  </body>
+  </main>
+
+  <footer>
+
+    <div class="seguridad">
+
+      <p><i class="fas fa-shield-alt"></i> No podemos acceder a la información que inserte en el sitio web. Todos los
+        cálculos se realizan en su navegador para que su número de tarjeta de crédito permanezca seguro con usted.</p>
+      <hr>
+    </div>
+
+    <div class="footer">
+      <h5>© 2021 Credit Card Validator | Todos los derechos reservados</h5>
+    </div>
+  </footer>
+
+  <script src="index.js" type="module"></script>
+
+  <script src="https://kit.fontawesome.com/9323b71566.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
